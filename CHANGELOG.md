@@ -7,12 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-01-23
+
 ### Added
-- Health endpoint with database, cache, storage checks and latency measurements
-- Stats endpoint with CPU, memory, disk, uptime (cgroups v1/v2 aware)
-- Queue endpoints for overview, failed jobs, retry functionality
-- Artisan endpoint for listing and executing whitelisted commands
+- Health endpoint (`/kick/health`) - database, cache, storage, redis checks with latency
+- Stats endpoint (`/kick/stats`) - CPU, memory, disk, uptime (cgroups v1/v2 aware)
+- Queue endpoints (`/kick/queue`, `/kick/queue/failed`, `/kick/queue/retry/{id}`)
+- Artisan endpoint (`/kick/artisan`) - list and execute whitelisted commands
 - Comprehensive test suite (94 tests, 277 assertions)
+- Full package documentation (README, CLAUDE.md, CHANGELOG)
+- GitHub Actions CI (tests, lint, dependabot automerge)
+- Issue and PR templates
 
 ## [0.1.1] - 2026-01-23
 
@@ -30,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPStan level 5 static analysis
 - Pest test suite
 
-[Unreleased]: https://github.com/StuMason/laravel-kick/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/StuMason/laravel-kick/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/StuMason/laravel-kick/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/StuMason/laravel-kick/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/StuMason/laravel-kick/releases/tag/v0.1.0
