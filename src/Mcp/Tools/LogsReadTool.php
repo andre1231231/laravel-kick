@@ -10,6 +10,7 @@ use Laravel\Mcp\ResponseFactory;
 use Laravel\Mcp\Server\Tool;
 use Laravel\Mcp\Server\Tools\Annotations\IsIdempotent;
 use Laravel\Mcp\Server\Tools\Annotations\IsReadOnly;
+use RuntimeException;
 use StuMason\Kick\Services\LogReader;
 
 #[IsReadOnly]
@@ -43,7 +44,7 @@ class LogsReadTool extends Tool
 
         try {
             $result = $this->logReader->read($file, $limit, 0, $search, $level);
-        } catch (InvalidArgumentException $e) {
+        } catch (InvalidArgumentException|RuntimeException $e) {
             return Response::error($e->getMessage());
         }
 
