@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-01-25
+
 ### Added
 - MCP (Model Context Protocol) integration via `laravel/mcp`
 - KickServer MCP server with auto-registration at `/mcp/kick`
@@ -19,6 +21,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `kick_queue_retry` - Retry failed jobs
   - `kick_artisan_list` - List allowed commands
   - `kick_artisan_run` - Execute whitelisted commands
+- Comprehensive MCP tool test suite (9 test files, 30+ tests)
+
+### Changed
+- MCP access requires wildcard (`*`) scope for security parity with HTTP API
+- Queue inspector methods now return `null` on error instead of silently returning 0/[]
+- LogReader throws exception on read failure instead of returning empty array
+- Minimum PHP version bumped to 8.4
+- Laravel 12 only (dropped Laravel 11 support)
+
+### Fixed
+- Silent failures in QueueInspector now logged and surfaced to API consumers
+- QueueController returns 503 when failed jobs unavailable
 
 ## [0.2.0] - 2026-01-23
 
@@ -48,7 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPStan level 5 static analysis
 - Pest test suite
 
-[Unreleased]: https://github.com/StuMason/laravel-kick/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/StuMason/laravel-kick/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/StuMason/laravel-kick/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/StuMason/laravel-kick/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/StuMason/laravel-kick/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/StuMason/laravel-kick/releases/tag/v0.1.0
