@@ -244,20 +244,12 @@ class LogReader
 
         fclose($pipes[0]);
         $output = stream_get_contents($pipes[1]);
-        $stderr = stream_get_contents($pipes[2]);
         fclose($pipes[1]);
         fclose($pipes[2]);
         $exitCode = proc_close($process);
 
-        // Check for stream read failures
-        if ($output === false) {
-            return $this->readWithPhpFilter($path, $lines, $offset, $search, $level);
-        }
-
-        // Exit code 0 = matches found, 1 = no matches (both OK), 2+ = error
-        if ($exitCode >= 2) {
-            // Grep encountered an error, fall back to PHP filtering
-            // stderr contains: $stderr (available for debugging if needed)
+        // Fall back to PHP filtering on stream read failure or grep error (exit code 2+)
+        if ($output === false || $exitCode >= 2) {
             return $this->readWithPhpFilter($path, $lines, $offset, $search, $level);
         }
 
